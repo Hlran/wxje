@@ -1,0 +1,123 @@
+<!--搜索输入框  -->
+<view class="search">
+  <image src='/pages/images/owner/小LOGO.jpg' 
+  class="img_small_logo" bindtap='redictTo'></image> 
+  <input type="text" class="search_border" bindtap='redictTo'/>
+  <image src='/pages/images/owner/3.jpg' 
+  class="search_button" bindtap='redictTo'></image>
+</view>
+
+<view class="share">
+  <image src='/pages/images/owner/2.jpg' 
+  class="img2" bindtap='redictTo'></image> 
+</view> 
+<!--头像和昵称  -->
+<view>
+  <image src='/pages/images/owner/1.jpg' 
+  class="head" bindtap='redictTo'></image> 
+
+  <view class='text_position'>
+    <view class="font_margin">
+      <text class='style'>昵称: </text>
+      <input type="text" class="message_border" bindtap='redictTo'/>
+    </view>
+
+
+    <view class="font_margin">
+      <text class='style'>账号: </text>
+      <input type="text" class="message_border" bindtap='redictTo'/>
+    </view>
+  </view>
+
+</view>
+<view class="listen_look_read_border">
+  <view class="listen_look_read_context">
+    <view class='listen'>
+      <text class='style_listen_look_read'>ting </text>
+      <text class='style_listen_look_read'> 听</text>
+    </view>
+
+    <view class="look">
+      <text class='style_listen_look_read'>kan </text>
+       <text class='style_listen_look_read'> 看 </text> 
+    </view>
+
+    <view class="read">
+      <text class='style_listen_look_read'>du </text>
+      <text class='style_listen_look_read'>读 </text>
+    </view>
+  </view>
+
+  </view>
+
+<!--点赞  -->
+ <view class="finger"> 
+  <view  class='finger_text_left'>
+    <text class="valign-center">点赞</text>  
+  </view>
+  <view class="big_finger">
+    <image src='/pages/images/owner/大拇指.jpg' bindtap='dianzan'></image> 
+  </view>
+  <view class='finger_text_right'>
+    <text class='style valign-center'>收藏</text>
+  </view>
+ </view> 
+
+<!--分类  -->
+<view class="classify-container">
+<view class='classify'>
+    <text  class='style'>游戏</text>
+</view>
+<view class='classify'>
+    <text  class='style'>娱乐</text>
+</view>
+<view class='classify'>
+    <text  class='style'>国际</text>
+</view>
+<view class='classify'>
+    <text  class='style'>帮助</text>
+</view>
+<view class='classify'>
+    <text  class='style'>未定义</text>
+</view>
+</view>
+<!--输入文字  -->
+<view>
+  
+  <view><text  class='style style-header'> 发表图片、视频/Publish，video</text></view>
+  <view class='photo_set'>
+    <view class='push_context'></view>
+  </view>
+  <view class="photo_set_num">
+    <view class='photo_set1'><text class='style'>相册1</text></view>
+    <view class='photo_set1'><text class='style'>相册1</text></view>
+    <view class='photo_set1'><text class='style'>相册1</text></view>
+    <view class='photo_set1'><text class='style'>相册1</text></view>
+  </view>
+</view>
+
+<!--已发表内容  -->
+<view class='public_style style-header'> 发表文章/publish a article</view>
+<block wx:for="{{article}}" wx:key="item">
+  <view class='article'>
+    <view class="article-left">
+      <view class="article-header">
+        <text class='style-title'>{{item.title}}</text>
+        <image src='{{item.image}}' class='picture'></image>
+      </view>
+      <view class="article-body" wx:if="{{item.body}}">
+        <text class='style'>{{item.body}}</text>
+      </view>
+    </view>
+    <view class="article-right">
+      <text class="style style-zan">点赞 {{item.zan}}</text> 
+      <text class="style">浏览 {{item.look}}</text>
+    </view>
+  </view>
+</block>
+
+
+
+
+
+

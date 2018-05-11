@@ -1,0 +1,9 @@
+
+<view class="center">
+<image src='/pages/images/1.jpg' class="img1"></image> 
+</view>
+
+<view class="foot">
+<image src='/pages/images/2.jpg' class="img2"></image>
+</view>
+
